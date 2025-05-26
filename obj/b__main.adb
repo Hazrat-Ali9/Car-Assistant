@@ -3,7 +3,9 @@ pragma Ada_95;
 pragma Source_File_Name (ada_main, Spec_File_Name => "b__main.ads");
 pragma Source_File_Name (ada_main, Body_File_Name => "b__main.adb");
 pragma Suppress (Overflow_Check);
-
+------------------------------------------------------------------------
+-- obj
+------------------------------------------------------------------------
 with System.Restrictions;
 with Ada.Exceptions;
 
