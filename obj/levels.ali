@@ -1,0 +1,116 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U levels%b		levels.adb		2c45b602 NE OO PK
+
+U levels%s		levels.ads		e0b07fe0 EE NE OO PK
+
+D levels.ads		20220427095952 e0b07fe0 levels%s
+D levels.adb		20220427100904 ccf5c9e2 levels%b
+D system.ads		20210520051136 2ffa5114 system%s
+G a e
+G c Z s s [roadruleIP levels 28 9 none]
+G c Z s s [carIP levels 15 9 none]
+G c Z s b [turnengineon levels 47 14 none]
+G c Z s b [turnengineoff levels 52 14 none]
+G c Z s b [unsetparkingmode levels 57 14 none]
+G c Z s b [setparkingmode levels 62 14 none]
+G c Z s b [addpassenger levels 67 14 none]
+G c Z s b [removepassenger levels 72 14 none]
+G c Z s b [enablediagosticmode levels 77 14 none]
+G c Z s b [disablediagosticmode levels 82 14 none]
+G c Z s s [invariantspeedlimit levels 87 13 none]
+G c Z s s [invariantacceleration levels 91 13 none]
+G c Z s b [increasespeed levels 95 14 none]
+G c Z s s [invariantdeceleration levels 100 13 none]
+G c Z s b [decreasespeed levels 103 14 none]
+G c Z s b [turn levels 108 14 none]
+G c Z s b [gearup levels 115 14 none]
+G c Z s b [geardown levels 120 14 none]
+X 1 levels.ads
+1K9*Levels 126l5 126e11 2|1b14 104l5 104t11
+3E9*Power 3e27 16r19
+3n19*On{3E9} 50r36 54r36 92r70 110r34 112r36 2|6r33 13r32 62r37 81r32
+3n23*Off{3E9} 36r36 49r36 55r36 2|5r32 14r34
+4I9*Battery<short_short_integer> 17r21
+5I9*BatteryDegradation<short_short_integer> 18r32
+6I9*Speed<short_short_integer> 19r17
+7E9*Maintenance 7e33 21r24
+7n25*On{7E9} 80r41 84r40 2|51r35 55r46
+7n29*Off{7E9} 41r41 49r97 50r70 79r40 85r41 93r78 97r66 98r98 101r35 105r67
+. 106r68 111r108 113r110 117r96 118r99 122r98 123r103 2|13r66 21r63 28r69
+. 35r74 44r82 56r47 71r35 81r66 92r63 99r62
+8I9*Passengers<short_short_integer> 22r27
+9I9*Gear<short_short_integer> 20r21
+10I9*MaxSpeed<short_short_integer> 29r19
+11E9*Object 11e28 23r23
+11n20*On{11E9}
+11n24*Off{11E9} 42r39 111r72 113r74 2|82r37
+12I9*MinimumBatteryLevel<short_short_integer> 24r24
+13E9*ParkingMode 13e33 25r16
+13n25*On{13E9} 44r34 49r63 55r63 59r33 65r33 2|5r57 23r33 29r38
+13n29*Off{13E9} 60r33 64r33 93r110 105r32 106r33 2|16r30 22r33 30r36 61r57
+15R9*Car 26e14 36r15
+16e7*PowerLevel{3E9} 36m23 49r23 50r23 54r23 55r23 92r57 110r21 112r23 2|5r19
+. 6m19 13r19 14m19 62r24 81r19
+17i7*BatteryLevel{4I9} 37m23 93r25 110r51 112r53 2|62r89
+18i7*BatteryDegradationLevel{5I9} 38m23 2|7m19 7r55 15m19 39m22 39r58 45m28
+. 45r64 64m19 64r55 74m16 74r52 85m17 85r53
+19i7*CarSpeed{6I9} 39m23 59r50 60r50 64r50 65r49 69r96 74r96 88r17 117r22
+. 118r25 122r24 123r27 2|21r19 28r25 37r24 44r136 61r20 63m19 63r40 72m16
+. 72r37 84m17 84r38 92r19 99r19
+20i7*GearInserted{9I9} 40m23 59r76 60r76 64r76 65r75 98r50 110r81 112r83
+. 117r48 118r51 122r50 123r53 2|22r50 29r54 65m19 65r44 73m16 73r41 86m17
+. 86r42 92r80 93m19 93r44 99r79 100m19 100r44
+21e7*MaintenanceMode{7E9} 41m23 49r79 50r52 79r22 80r23 84r22 85r23 93r60
+. 97r48 98r80 101r17 105r49 106r50 111r90 113r92 117r78 118r81 122r80 123r85
+. 2|13r48 21r45 28r51 35r56 44r64 51m16 55r28 56m28 71r17 81r48 92r45 99r44
+22i7*NumberOfPassengers{8I9} 45m23 69r22 69r59 70r23 70r59 74r22 74r59 75r23
+. 75r59 92r16 111r19 113r20 2|35r20 36r24 38m22 38r53 44r28 44r99 62r53
+23e7*ObjectDetected{11E9} 42m23 111r55 113r57 2|82r20
+24i7*MinimumBattery{12I9} 43m23
+25e7*Parking{13E9} 44m23 49r53 55r53 59r23 60r23 64r23 65r23 93r100 105r22
+. 106r23 2|5r49 16m19 22r23 23m22 29r28 30m25 61r47
+28R9*RoadRule 30e14 33r21
+29i7*SpeedLimit{10I9} 34m34
+31a4*Str{string}
+33r4*RoadLimitation{28R9}
+36r4*TeslaCar{15R9} 48r27 49r14 49r44 49r70 50r14 50r43 53r27 54r14 55r14
+. 55r44 58r27 59r14 59r41 59r67 60r14 60r41 60r67 63r27 64r14 64r41 64r67
+. 65r14 65r40 65r66 68r27 69r13 69r50 69r87 70r14 70r50 73r27 74r13 74r50
+. 74r87 75r14 75r50 78r27 79r13 80r14 83r27 84r13 85r14 88r8 92r7 92r48 93r16
+. 93r51 93r91 96r27 97r39 98r41 98r71 101r8 104r27 105r13 105r40 106r14 106r41
+. 109r27 110r12 110r42 110r72 111r10 111r46 111r81 112r14 112r44 112r74 113r11
+. 113r48 113r83 116r27 117r13 117r39 117r69 118r16 118r42 118r72 121r27 122r15
+. 122r41 122r71 123r18 123r44 123r76 2|5r10 5r40 6m10 7m10 7r46 13r10 13r39
+. 14m10 15m10 16m10 21r10 21r36 22r14 22r41 23m13 28r16 28r42 29r19 29r45
+. 30m16 35r11 35r47 36r15 37r15 38m13 38r44 39m13 39r49 44r19 44r55 44r90
+. 44r127 45m19 45r55 51m7 55r19 56m19 61r11 61r38 62r15 62r44 62r80 63m10
+. 63r31 64m10 64r46 65m10 65r35 71r8 72m7 72r28 73m7 73r32 74m7 74r43 81r10
+. 81r39 82r11 84m8 84r29 85m8 85r44 86m8 86r33 92r10 92r36 92r71 93m10 93r35
+. 99r10 99r35 99r70 100m10 100r35
+47U14*TurnEngineOn 2|4b14 9l8 9t20
+52U14*TurnEngineOff 2|12b14 18l11 18t24
+57U14*UnsetParkingMode 2|27b14 32l11 32t27
+62U14*SetParkingMode 2|20b14 25l14 25t28
+67U14*AddPassenger 2|34b14 41l8 41t20
+72U14*RemovePassenger 2|43b14 47l8 47t23
+77U14*EnableDiagosticMode 2|50b14 52l8 52t27
+82U14*DisableDiagosticMode 2|54b14 58l8 58t28
+87V13*InvariantSpeedLimit{boolean}
+91V13*InvariantAcceleration{boolean} 97s13 98s14
+95U14*IncreaseSpeed 2|60b14 67l8 67t21
+100V13*InvariantDeceleration{boolean}
+103U14*DecreaseSpeed 2|70b14 76l11 76t24
+108U14*Turn 2|79b14 88l11 88t15
+115U14*GearUp 2|90b14 95l8 95t14
+120U14*GearDown 2|97b14 102l8 102t16
+

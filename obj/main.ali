@@ -1,0 +1,168 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_ENUMERATION_MAPS
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_RELATIVE_DELAY
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV MAX_TASKS=1+
+
+U main%b		main.adb		2be419e2 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.float_random%s  a-nuflra.adb	a-nuflra.ali
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W levels%s		levels.adb		levels.ali
+Z system%s		system.ads		system.ali
+Z system.img_flt%s	s-imgflt.ads		s-imgflt.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-calend.ads		20210520051128 474d9720 ada.calendar%s
+D a-caldel.ads		20210520051128 9f20b83d ada.calendar.delays%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20210520051130 84bea7a3 ada.numerics%s
+D a-nuflra.ads		20210520051130 4056ab7a ada.numerics.float_random%s
+D a-reatim.ads		20210520051128 0240fc73 ada.real_time%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-c.ads		20210520051132 d9beded9 interfaces.c%s
+D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D levels.ads		20220427095952 e0b07fe0 levels%s
+D main.adb		20220427094538 25f61815 main%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
+D s-imager.ads		20210520051134 500b11a9 system.image_r%s
+D s-imageu.ads		20210520051134 525c30c6 system.image_u%s
+D s-imgflt.ads		20210520051134 78689de8 system.img_flt%s
+D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
+D s-imguns.ads		20210520051134 0e4da2ac system.img_uns%s
+D s-multip.ads		20210520051134 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210520051128 97504df8 system.os_interface%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-powflt.ads		20210520051134 46f7a1b9 system.powten_flt%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-rannum.ads		20210520051134 c3978523 system.random_numbers%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210520051134 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20210520051128 601f6b72 system.task_info%s
+D s-taspri.ads		20210520051128 a1350802 system.task_primitives%s
+D s-taprop.ads		20210520051128 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20210520051128 88fba9ad system.tasking%s
+D s-tassta.ads		20210520051128 cca55c94 system.tasking.stages%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D s-win32.ads		20210520051136 15ac53fb system.win32%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [main standard 5 11 none]
+G r c none [main standard 5 11 none] [turnengineon levels 47 14 none]
+G r c none [main standard 5 11 none] [turnengineoff levels 52 14 none]
+G r c none [main standard 5 11 none] [addpassenger levels 67 14 none]
+G r c none [main standard 5 11 none] [removepassenger levels 72 14 none]
+G r c none [main standard 5 11 none] [increasespeed levels 95 14 none]
+G r c none [main standard 5 11 none] [decreasespeed levels 103 14 none]
+G r c none [main standard 5 11 none] [enablediagosticmode levels 77 14 none]
+G r c none [main standard 5 11 none] [disablediagosticmode levels 82 14 none]
+G r c none [main standard 5 11 none] [unsetparkingmode levels 57 14 none]
+G r c none [main standard 5 11 none] [setparkingmode levels 62 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 21|2r6 2r23 3r6 3r37
+X 6 a-numeri.ads
+16K13*Numerics 35e17 21|3r10 3r41
+X 7 a-nuflra.ads
+41K22*Float_Random 74e30 21|3w19 3r50
+47R9*Generator<38|65R9> 21|9r10
+49F12*Uniformly_Distributed{float}
+51V13*Random{49F12}<38|73p13> 21|101s18
+X 14 a-textio.ads
+58K13*Text_IO 725e16 21|2w10 2r27
+463U14*Put 21|109s13 115s13 138s13 141s13
+479U14*Get_Line 21|45s10
+506U14*Put_Line 21|13s7 14s7 15s7 16s7 17s7 18s7 19s7 20s7 21s7 22s7 23s7
+. 24s7 25s7 26s7 27s7 28s7 29s7 30s7 33s13 37s13 44s10 48s13 50s13 51s13
+. 53s13 55s13 56s13 58s13 60s13 61s13 63s13 65s13 66s13 68s13 69s13 70s13
+. 72s13 73s13 74s13 75s13 76s13 77s13 79s13 80s13 81s13 83s13 84s13 85s13
+. 86s13 87s13 88s13 90s13 92s13 93s13 95s13 97s13 98s13 100s13 102s13 106s13
+. 110s13 116s16 119s13 120s13 121s13 122s13 123s13 124s13 125s13 126s13 127s13
+. 128s13 129s13 130s13 131s13 132s13 133s13 134s13 135s13 136s13 139s13 142s13
+. 143s13
+X 20 levels.ads
+1K9*Levels 126e11 21|1w6 1r18
+3n19*On{3E9} 21|32r65 36r66 40r35
+4I9*Battery<short_short_integer>
+5I9*BatteryDegradation<short_short_integer>
+6I9*Speed<short_short_integer>
+8I9*Passengers<short_short_integer>
+13n25*On{13E9} 21|111r35
+16e7*PowerLevel{3E9} 21|32r52 36r53 40r22 51r31 56r31
+17i7*BatteryLevel{4I9} 21|32r22 36r22 41m22 41r47 77r31 88r31 139r31
+18i7*BatteryDegradationLevel{5I9} 21|75r31 86r31 142r31
+19i7*CarSpeed{6I9} 21|70r31 73r31 81r31 84r31
+21e7*MaintenanceMode{7E9} 21|93r31 98r31
+22i7*NumberOfPassengers{8I9} 21|61r31 66r31
+25e7*Parking{13E9} 21|110r31 111r25 116r34
+36r4*TeslaCar{15R9} 21|32r13 32r43 36r13 36r44 40r13 41m13 41r38 51r22 56r22
+. 61r22 66r22 70r22 73r22 75r22 77r22 81r22 84r22 86r22 88r22 93r22 98r22
+. 110r22 111r16 116r25 139r22 142r22
+47U14*TurnEngineOn 21|49s13
+52U14*TurnEngineOff 21|54s13
+57U14*UnsetParkingMode 21|112s16
+62U14*SetParkingMode 21|114s16
+67U14*AddPassenger 21|59s13
+72U14*RemovePassenger 21|64s13
+77U14*EnableDiagosticMode 21|91s13
+82U14*DisableDiagosticMode 21|96s13
+95U14*IncreaseSpeed 21|71s13
+103U14*DecreaseSpeed 21|82s13
+X 21 main.adb
+5U11*Main 5b11 154l5 154t9
+6a4 Str{string} 45m19 46r15
+7i4 Last{natural} 45m23
+8t9 Start 11b14 149l8 149t13
+9r4 RNG{7|47R9} 101r25
+10f4 X{float} 101m13 102r22
+X 42 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+

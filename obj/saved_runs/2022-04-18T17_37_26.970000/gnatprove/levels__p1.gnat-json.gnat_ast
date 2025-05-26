@@ -1,0 +1,163 @@
+(* Module for axiomatizing type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  
+  type integer  = <range -2147483648 2147483647>
+  
+  function   first () requires { True } ensures  { True } returns
+    int = -2147483648
+  
+  function   last () requires { True } ensures  { True } returns
+    int = 2147483647
+  
+  function   in_range (x : int) requires { True } ensures  { True } returns
+     = ((first <= x) /\ (x <= last))
+  
+  clone export ada__model.Static_Discrete with axiom . type t = integer,
+    function first = first, function last = last,
+    predicate in_range = in_range
+  
+  type integer__ref  = { mutable integer__content : integer }
+  
+  function   integer__ref_integer__content__projection (a : integer__ref)
+    requires {  } ensures  {  } returns integer = a.integer__content
+  
+  meta model_projection function integer__ref_integer__content__projection
+  
+  meta inline:no function integer__ref_integer__content__projection
+  
+  function   integer__havoc (x : integer__ref) requires {  } ensures  {  }
+    returns unit
+
+end
+
+(* Module giving axioms for type "integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Standard__integer
+  
+  function   dynamic_invariant
+    (([mlw:proxy_symbol] [introduced] temp___expr_18) : int
+    ([mlw:proxy_symbol] [introduced] temp___is_init_14) : bool
+    ([mlw:proxy_symbol] [introduced] temp___skip_constant_15) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_toplevel_16) : bool
+    ([mlw:proxy_symbol] [introduced] temp___do_typ_inv_17) : bool) requires
+    { True } ensures  { True } returns
+     = (if
+       ((([mlw:proxy_symbol] [introduced] temp___is_init_14) = True) \/
+          (Standard__integer.first <= Standard__integer.last))
+       then
+       (Standard__integer.dynamic_property Standard__integer.first
+          Standard__integer.last ([mlw:proxy_symbol]
+          [introduced] temp___expr_18))
+       )
+  
+  function   default_initial_assumption
+    (([mlw:proxy_symbol] [introduced] temp___expr_19) : int
+    ([mlw:proxy_symbol] [introduced] temp___skip_top_level_20) : bool)
+    requires { True } ensures  { True } returns  = True
+
+end
+
+(* Module for defining a ref holding the value of variable "s" defined at levels.ads:6, created in Gnat2Why.Decls.Translate_Variable *)
+module Levels__p1__s
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  val s [model_trace:858] [model_projected] [name:s] [sloc:levels.ads:6]: int
+
+end
+
+(* Module for defining a ref holding the value of variable "n" defined at levels.ads:6, created in Gnat2Why.Decls.Translate_Variable *)
+module Levels__p1__n
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  val n [name:n] [model_projected] [model_trace:861] [sloc:levels.ads:6]: int
+
+end
+
+(* Module giving an empty axiom for the entity "s" defined at levels.ads:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Levels__p1__s___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module giving an empty axiom for the entity "n" defined at levels.ads:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Levels__p1__n___axiom
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  
+  
+
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "p1" defined at levels.ads:6, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Levels__p1__subprogram_def
+  
+  use import _gnatprove_standard.Main
+  use import int.Int
+  use import int.Int
+  use        Standard__integer
+  use        Standard__integer___axiom
+  use        Levels__p1__s
+  use        Levels__p1__n
+  use        Standard__integer___axiom
+  use        Standard__integer___axiom
+  use        Levels__p1__s___axiom
+  use        Levels__p1__n___axiom
+  
+  function [GP_Subp:levels.ads:6] [sloc:levels.ads:6] def
+    (__void_param : unit) requires { True } ensures  {  } returns
+     = (* Assume dynamic invariants of inputs of the subprogram levels.ads:6 *);
+        assume
+        { (Standard__integer___axiom.dynamic_invariant !Levels__p1__s.s False
+             False True True) };
+        assume
+        { (Standard__integer___axiom.dynamic_invariant !Levels__p1__n.n True
+             False True True) };
+        (* Assume moved pointers in outputs of the subprogram levels.ads:6 *);
+        (* Check for RTE in the Pre of the subprogram levels.ads:6 *);
+        abstract ensures
+        { True } begin  (let _ = True in ())  end;
+        (* Assume Pre of the subprogram levels.ads:6 *);
+        (try
+        ();
+          ([GP_Sloc:levels.adb:7:9] ([sloc:levels.adb:7] ( Levels__p1__n.n :=
+                                    ( ([sloc:levels.adb:7] ([GP_Sloc:levels.adb:7:13]
+                                                           [GP_Shape:n_assign__add]
+                                                           [vc:annotation]
+                                                           [comment:      n := n+1; s:= s+1;             ^ levels.adb:7:13:VC_OVERFLOW_CHECK]
+                                                           [GP_Reason:VC_OVERFLOW_CHECK]
+                                                           [GP_Id:0] (
+                                                           Standard__integer.range_check_
+                                                             (!Levels__p1__n.n
+                                                                + 1))))))));
+          ([GP_Sloc:levels.adb:7:18] ([sloc:levels.adb:7] ( Levels__p1__s.s
+                                     :=
+                                     ( ([sloc:levels.adb:7] ([GP_Shape:s_assign__add]
+                                                            [vc:annotation]
+                                                            [GP_Reason:VC_OVERFLOW_CHECK]
+                                                            [GP_Sloc:levels.adb:7:22]
+                                                            [comment:      n := n+1; s:= s+1;                      ^ levels.adb:7:22:VC_OVERFLOW_CHECK]
+                                                            [GP_Id:1] (
+                                                            Standard__integer.range_check_
+                                                              (!Levels__p1__s.s
+                                                                 + 1))))))));
+          raise Return__exc with | Return__exc  -> ());
+        abstract ensures { True } begin  (let _ = True in ())  end
+
+end

@@ -1,0 +1,4 @@
+levels.adb:7:13: medium: overflow check might fail [reason for check: result of addition must fit in a 32-bits machine integer] [possible fix: subprogram at levels.ads:6 should mention n in a precondition][#1]
+levels.adb:7:21: warning: "s" may be referenced before it has a value [enabled by default]
+levels.adb:7:21: high: "s" is not initialized[#0]
+levels.adb:7:22: medium: overflow check might fail [reason for check: result of addition must fit in a 32-bits machine integer][#2]

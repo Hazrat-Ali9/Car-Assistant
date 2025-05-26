@@ -1,0 +1,171 @@
+module Standard__integer
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type integer = <range -2147483648 2147483647>
+  
+  val function first : int
+    ensures { result = ((- 2147483648) : int) }
+  
+  val function last : int
+    ensures { result = (2147483647 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = integer,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type integer__ref = { mutable integer__content : integer }
+  
+  function integer__ref_integer__content__projection (a: integer__ref) : integer =
+    a.integer__content
+  
+  meta "model_projection" function integer__ref_integer__content__projection
+  
+  meta "inline:no" function integer__ref_integer__content__projection
+  
+  val integer__havoc (x: integer__ref) : unit
+    writes { x }
+end
+
+module Standard__integer___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Standard__integer as Standard__integer
+  
+  predicate dynamic_invariant (temp___expr_18: int) (temp___is_init_14: bool) (temp___skip_constant_15: bool) (temp___do_toplevel_16: bool) (temp___do_typ_inv_17: bool) =
+    if ((temp___is_init_14 = True) \/
+          (Standard__integer.first <= Standard__integer.last)) then
+      (((Standard__integer.dynamic_property Standard__integer.first)
+          Standard__integer.last)
+         temp___expr_18)
+    else true
+  
+  val dynamic_invariant (temp___expr_18: int) (temp___is_init_14: bool) (temp___skip_constant_15: bool) (temp___do_toplevel_16: bool) (temp___do_typ_inv_17: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_18 : int))
+                      (temp___is_init_14 : bool))
+                     (temp___skip_constant_15 : bool))
+                    (temp___do_toplevel_16 : bool))
+                   (temp___do_typ_inv_17 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_19: int) (temp___skip_top_level_20: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_19: int) (temp___skip_top_level_20: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_19 : int))
+                   (temp___skip_top_level_20 : bool)) }
+end
+
+module Levels__p1__s
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val s : int__ref
+end
+
+module Levels__p1__n
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val n : int__ref
+end
+
+module Levels__p1__s___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Levels__p1__n___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Levels__p1__subprogram_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Standard__integer as Standard__integer
+  use Standard__integer___axiom as Standard__integer___axiom
+  use Levels__p1__s as Levels__p1__s
+  use Levels__p1__n as Levels__p1__n
+  use Standard__integer___axiom as Standard__integer___axiom
+  use Standard__integer___axiom as Standard__integer___axiom
+  use Levels__p1__s___axiom as Levels__p1__s___axiom
+  use Levels__p1__n___axiom as Levels__p1__n___axiom
+  
+  let def (__void_param : unit)
+    requires { [#"levels.ads" 6 0 0] true }
+  = [@vc:divergent]
+    (([@GNAT-comment:Assume dynamic invariants of inputs of the subprogram levels.ads:6]
+      ());
+     ([#"levels.ads" 6 0 0]
+      assume {
+        [#"levels.ads" 6 0 0]
+        (((((Standard__integer___axiom.dynamic_invariant
+               (Levels__p1__s.s.int__content))
+              False)
+             False)
+            True)
+           True) });
+     ([#"levels.ads" 6 0 0]
+      assume {
+        [#"levels.ads" 6 0 0]
+        (((((Standard__integer___axiom.dynamic_invariant
+               (Levels__p1__n.n.int__content))
+              True)
+             False)
+            True)
+           True) });
+     ([@GNAT-comment:Assume moved pointers in outputs of the subprogram levels.ads:6]
+      ());
+     ([@GNAT-comment:Check for RTE in the Pre of the subprogram levels.ads:6]
+      ());
+     ([#"levels.ads" 6 0 0] ());
+     ([@GNAT-comment:Assume Pre of the subprogram levels.ads:6] ());
+     ([#"levels.ads" 6 0 0]
+      (try
+         ([@GP_Sloc:levels.adb:7:9]
+          [#"levels.adb" 7 0 0]
+          [#"levels.adb" 7 0 0]
+          (Levels__p1__n.n.int__content <-
+             ([#"levels.adb" 7 0 0]
+              [@GP_Sloc:levels.adb:7:13]
+              [@GP_Shape:n_assign__add]
+              [@vc:annotation]
+              [@comment:      n := n+1; s:= s+1;             ^ levels.adb:7:13:VC_OVERFLOW_CHECK]
+              [@GP_Reason:VC_OVERFLOW_CHECK]
+              [@GP_Id:0]
+              (Standard__integer.range_check_
+                 ((Levels__p1__n.n.int__content) + (1 : int))))));
+         ([@GP_Sloc:levels.adb:7:18]
+          [#"levels.adb" 7 0 0]
+          [#"levels.adb" 7 0 0]
+          (Levels__p1__s.s.int__content <-
+             ([#"levels.adb" 7 0 0]
+              [@GP_Shape:s_assign__add]
+              [@vc:annotation]
+              [@GP_Reason:VC_OVERFLOW_CHECK]
+              [@GP_Sloc:levels.adb:7:22]
+              [@comment:      n := n+1; s:= s+1;                      ^ levels.adb:7:22:VC_OVERFLOW_CHECK]
+              [@GP_Id:1]
+              (Standard__integer.range_check_
+                 ((Levels__p1__s.s.int__content) + (1 : int))))));
+         (raise Return__exc)
+       with Return__exc -> ()
+       end)))
+end

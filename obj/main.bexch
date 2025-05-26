@@ -1,0 +1,23 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\david\Desktop\FASE-COUSEWORK\test_project.gpr
+20220414134722 350abfde42a252b384c4c1f5a3108c8c
+[BOUND OBJECT FILES]
+C:\Users\david\Desktop\FASE-COUSEWORK\obj\levels.o
+C:\Users\david\Desktop\FASE-COUSEWORK\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\david\Desktop\FASE-COUSEWORK\obj\
+-LC:\Users\david\Desktop\FASE-COUSEWORK\obj\
+-LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnarl.a
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

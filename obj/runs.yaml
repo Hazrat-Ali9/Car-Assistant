@@ -1,0 +1,100 @@
+'2022-04-14T14:47:46.519000':
+  category: GNATprove
+  files:
+  - C:\Users\david\Desktop\FASE-COUSEWORK\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2022-04-14T14:47:46.519000'
+'2022-04-14T15:15:14.065000':
+  category: GNATprove
+  files:
+  - C:\Users\david\Desktop\FASE-COUSEWORK\obj\gnatprove
+  label: Examine All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    main.adb:2:06: error: file "borst.ads" not found
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2022-04-14T15:15:14.065000'
+'2022-04-14T17:13:15.913000':
+  category: GNATprove
+  files:
+  - C:\Users\david\Desktop\FASE-COUSEWORK\obj\gnatprove
+  label: Basic Prove Line
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2022-04-14T17:13:15.913000'
+'2022-04-14T17:25:49.861000':
+  category: GNATprove
+  files:
+  - C:\Users\david\Desktop\FASE-COUSEWORK\obj\gnatprove
+  label: Examine All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: analysis of data and information flow ...
+
+    warning: no bodies have been analyzed by GNATprove
+
+    enable analysis of a non-generic body using SPARK_Mode
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2022-04-14T17:25:49.861000'
+'2022-04-18T17:37:26.970000':
+  category: GNATprove
+  files:
+  - C:\Users\david\Desktop\FASE-COUSEWORK\obj\gnatprove
+  label: Basic Prove File
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    levels.adb:7:13: medium: overflow check might fail [reason for check: result of
+    addition must fit in a 32-bits machine integer] [possible fix: subprogram at levels.ads:6
+    should mention n in a precondition][#1]
+
+    levels.adb:7:21: warning: "s" may be referenced before it has a value [enabled
+    by default]
+
+    levels.adb:7:21: high: "s" is not initialized[#0]
+
+    levels.adb:7:22: medium: overflow check might fail [reason for check: result of
+    addition must fit in a 32-bits machine integer][#2]
+
+    Summary logged in C:\Users\david\Desktop\FASE-COUSEWORK\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2022-04-18T17:37:26.970000'
+'2022-04-18T17:38:20.425000':
+  category: GNATprove
+  files:
+  - C:\Users\david\Desktop\FASE-COUSEWORK\obj\gnatprove
+  label: Basic Prove File
+  output: 'error: wrong argument for --mode
+
+    Try "gnatprove --help" for more information.
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2022-04-18T17:38:20.425000'

@@ -1,0 +1,33 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U levels%b		levels.adb		1428c133 OO PK
+
+U levels%s		levels.ads		a0cfca29 OO PK
+
+D levels.ads		20220418163654 a0cfca29 levels%s
+D levels.adb		20220418163648 b4e70b1a levels%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 levels.ads
+1K9*Levels 8l5 8e11 2|1b14 11l5 11t11
+6U14*P1 6<18 6=34 2|4b14 8l8 8t10
+6i18 s{integer} 2|4b18 7m17 7r21
+6i34 n{integer} 2|4b34 7m7 7r12
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS levels__p1 0
+GG EK_GLOBALS levels__p1 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 levels proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS levels 0
+GG EK_GLOBALS levels local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 refined_initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE levels TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE levels__p1 FALSE FALSE FALSE FALSE TRUE levels VISIBLE_PART
+GG EK_END_MARKER
