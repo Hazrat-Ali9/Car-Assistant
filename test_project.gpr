@@ -3,3 +3,4 @@ project Test_Project is
     for Object_Dir use "obj";
     for Main use ("main.adb");
 end Test_Project;
+# team project
